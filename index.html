@@ -5,7 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <title>Left Menu</title>
   <meta name="description" content="Тестовое задание. Редизайн левого меню">
@@ -26,27 +41,27 @@
       <div class="menu__user user">
         <div class="user__container">
           <button class="user__button" type="button">
-            <img class="user__icon" src="/media/user/person-square.svg" width="48" height="48"
+            <img class="user__avatar" src="/media/user/default-avatar.svg" width="48" height="48"
               alt="Аватар пользователя.">
           </button>
-          <div class="user__sub sub">
-            <button class="sub__item">
-              <img class="sub__icon" src="/media/user/person-square.svg" width="24" height="24" alt=".">
+          <div class="user__sub sub" id="user-sub">
+            <button class=" sub__item" type="button" tabindex="-1">
+              <img class="sub__icon" src="/media/user/default-avatar.svg" width="24" height="24" alt=".">
               <span class="sub__txt">Профиль</span>
             </button>
-            <button class="sub__item">
+            <button class="sub__item" type="button" tabindex="-1">
               <img class="sub__icon" src="/media/user/logoutLogo.svg" width="24" height="24" alt=".">
               <span class="sub__txt">Выйти</span>
             </button>
           </div>
         </div>
         <button class="user__button" type="button">
-          <img class="user__icon" src="/media/user/bell.svg" width="28" height="28" alt="Уведомления.">
-          <div class="user__counter">0</div>
+          <img class="user__icon" src="/media/user/notification.svg" width="28" height="28" alt="Уведомления.">
+          <div class="user__counter" id="notifications">0</div>
         </button>
         <button class="user__button" type="button">
-          <img class="user__icon" src="/media/user/file-earmark-text.svg" width="28" height="28" alt="Согласования.">
-          <div class="user__counter">99</div>
+          <img class="user__icon" src="/media/user/approvals.svg" width="28" height="28" alt="Согласования.">
+          <div class="user__counter" id="approval">99</div>
         </button>
       </div>
       <ul class="menu__section">

@@ -245,10 +245,22 @@ body {
   outline: 2px solid orange;
 }
 
+.user__avatar {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
 .user__icon {
   display: block;
   margin: 0;
   padding: 0;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .user__counter {
