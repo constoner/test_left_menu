@@ -21,9 +21,86 @@
     </div>
   </header>
   <div class="layout">
-    <nav class="menu"></nav>
+    <nav class="menu">
+      <div class="menu__user">USER MENU</div>
+      <ul class="menu__section">
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Планировщик</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">CRM</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Склад</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Help Desk</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Финансы</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Аналитика</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">База знаний</a>
+        </li>
+      </ul>
+      <ul class="menu__section">
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Документация</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Настройки</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Список обновлений</a>
+        </li>
+      </ul>
+      <ul class="menu__section">
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Пользователи</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#!">Задачи</a>
+        </li>
+      </ul>
+      <footer class="menu__footer footer">
+        <ul class="footer__item store">
+          <li class="store__item">
+            <a class="store__link" href="#!">
+              <img class="store__image" src="/media/app_store.svg" width="32" height="32" aria-hidden="true"
+                alt="Апп стор.">
+            </a>
+          </li>
+          <li class="store__item">
+            <a class="store__link" href="#!">
+              <img class="store__image" src="/media/google_play.svg" width="32" height="32" aria-hidden="true"
+                alt="Гугл плей.">
+            </a>
+          </li>
+          <li class="store__item">
+            <a class="store__link" href="#!">
+              <img class="store__image" src="/media/telegram.svg" width="32" height="32" aria-hidden="true"
+                alt="Телеграм бот.">
+            </a>
+          </li>
+        </ul>
+        <div class="footer__item error">
+          <button type="button" id="error-button">Сообщить об ошибке</button>
+        </div>
+        <div class="footer__item toggle">
+          <label class="toggle__label custom-toggle">
+            <input class="visually-hidden custom-toggle__input" id="hide-menu" type="checkbox" name="hide-menu"
+              value="false">
+            <span class="custom-toggle__button"></span>
+            <span class="custom-toggle__label">Всегда открыто</span>
+          </label>
+        </div>
+      </footer>
+    </nav>
     <main class="main">
-      <div class="main__content">
+      <div class="main__content">`
         <p class="main__spare">ЗДЕСЬ БУДЕТ КОНТЕНТ</p>
       </div>
     </main>
