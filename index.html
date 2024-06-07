@@ -22,7 +22,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <title>Left Menu</title>
+  <title>Test Left Menu</title>
   <meta name="description" content="Тестовое задание. Редизайн левого меню">
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -37,10 +37,10 @@
   </header>
   <div class="layout">
     <nav class="menu">
-
+      <!-- user menu -->
       <div class="menu__user user">
         <div class="user__container">
-          <button class="user__button" type="button">
+          <button class="user__button" type="button" id="user-btn">
             <img class="user__avatar" src="/media/user/default-avatar.svg" width="48" height="48"
               alt="Аватар пользователя.">
           </button>
@@ -61,51 +61,88 @@
         </button>
         <button class="user__button" type="button">
           <img class="user__icon" src="/media/user/approvals.svg" width="28" height="28" alt="Согласования.">
-          <div class="user__counter" id="approval">99</div>
+          <div class="user__counter" id="approval"></div>
         </button>
       </div>
+
+      <!-- main menu -->
       <ul class="menu__section">
         <li class="menu__item">
-          <a class="menu__link" href="#!">Планировщик</a>
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/plannerLogo.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">Планировщик</span>
+          </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">CRM</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Склад</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Help Desk</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Финансы</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Аналитика</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">База знаний</a>
+        <li class="menu__item item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/CRMlogo.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">CRM</span>
+            <img class="menu__icon menu__icon--sub" src="/media/arrowOpen.svg" width="10" height="10" alt=".">
+          </a>
+          <div class="item__sub sub-add">
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Сделки</p>
+              </a>
+            </div>
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Компании</p>
+              </a>
+            </div>
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Контакты</p>
+              </a>
+            </div>
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Объекты</p>
+              </a>
+            </div>
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Договоры</p>
+              </a>
+            </div>
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Коммерческие предложения</p>
+              </a>
+              <div class="sub-add__sub">
+                <button class="item__btn" type="button">
+                  <img src="/media/addSm.svg" width="18" height="18" alt=".">
+                  <p class="item__txt"></p>Создать КП</p>
+                </button>
+              </div>
+            </div>
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Счета</p>
+              </a>
+              <div class="sub-add__sub">
+                <button class="item__btn" type="button">
+                  <img src="/media/addSm.svg" width="18" height="18" alt=".">
+                  <p class="item__txt"></p>Создать счет</p>
+                </button>
+              </div>
+            </div>
+            <div class="sub-add__item">
+              <a class="menu__link" href="#!">
+                <p class="item__txt">Акты выполненных работ</p>
+              </a>
+              <div class="sub-add__sub">
+                <button class="item__btn" type="button">
+                  <img src="/media/addSm.svg" width="18" height="18" alt=".">
+                  <p class="item__txt"></p>Создать акт</p>
+                </button>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
-      <ul class="menu__section">
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Документация</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Настройки</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Список обновлений</a>
-        </li>
-      </ul>
-      <ul class="menu__section">
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Пользователи</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#!">Задачи</a>
-        </li>
-      </ul>
+
+      <!-- menu footer -->
       <footer class="menu__footer footer">
         <ul class="footer__item store">
           <li class="store__item">
@@ -140,12 +177,15 @@
         </div>
       </footer>
     </nav>
+
+    <!-- content -->
     <main class="main">
-      <div class="main__content">`
+      <div class="main__content">
         <p class="main__spare">ЗДЕСЬ БУДЕТ КОНТЕНТ</p>
       </div>
     </main>
   </div>
+  <script src="/js/index.js" type="module" type="text/javascript" async></script>
 </body>
 
 </html>
