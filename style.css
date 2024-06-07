@@ -38,14 +38,16 @@ html {
   --main-lite: #CFD3D4;
   --main-dark: #202020;
   --accent: #9BB8EC;
+  --secondary: #ABABAB;
   --background-dark: #3E4A51;
   --menu-shadow: 0 0 10px 0px var(--background-dark);
+  --main-font: Arial, Helvetica, sans-serif;
 
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   color: var(--main-dark);
   scroll-behavior: smooth;
 
@@ -167,6 +169,7 @@ body {
   }
 
   .main__spare {
+    font-family: var(--main-font);
     font-size: 32px;
     font-weight: 700;
     line-height: 110%;
@@ -186,7 +189,82 @@ body {
   color: var(--main-lite);
   background-color: var(--background-dark);
   box-shadow: var(--menu-shadow);
+  }
+
+.menu__section {
+  margin: 0;
+  padding: 0;
+  padding-top: 14px;
+  border-top: 2px solid var(--secondary);
+  list-style-type: none;
 }
+
+/* ==============================
+========= MENU USER STYLES ========
+============================== */
+
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.user__button {
+  position: relative;
+  margin: 0;
+  margin-bottom: 14px;
+  margin-right: 10px;
+  padding: 0;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.user__button:hover,
+.user__button:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+.user__button:active {
+  opacity: 0.4;
+}
+
+.user__button:focus-visible {
+  opacity: 1;
+  outline: 2px solid orange;
+}
+
+.user__icon {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.user__counter {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  font-family: var(--main-font);
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--main-lite);
+  background-color: rgb(224, 44, 12);
+  border-radius: 50%;
+  transform: translate(100%, 0);
+}
+
+/* ==============================
+========= MENU FOOTER STYLES ========
+============================== */
 
 .menu__footer {
   margin-top: auto;
@@ -233,6 +311,7 @@ body {
   margin: 0;
   margin-bottom: 14px;
   padding: 0;
+  font-family: var(--main-font);
   font-size: 12px;
   color: inherit;
   background-color: unset;
@@ -273,7 +352,7 @@ body {
   display: block;
   width: 48px;
   height: 24px;
-  background-color: var(--main-lite);
+  background-color: var(--secondary);
   border-radius: 12px;
   transition: all 0.2s ease-out;
   cursor: pointer;
@@ -314,6 +393,7 @@ body {
 
 .custom-toggle__label {
   padding-left: 8px;
+  font-family: var(--main-font);
   font-size: 12px;
   line-height: 100%;
   cursor: pointer;

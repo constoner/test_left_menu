@@ -22,7 +22,20 @@
   </header>
   <div class="layout">
     <nav class="menu">
-      <div class="menu__user">USER MENU</div>
+
+      <div class="menu__user user">
+        <button class="user__button" type="button">
+          <img class="user__icon" src="/media/user/person-square.svg" width="48" height="48" alt="Аватар пользователя.">
+        </button>
+        <button class="user__button" type="button">
+          <img class="user__icon" src="/media/user/bell.svg" width="28" height="28" alt="Уведомления.">
+          <div class="user__counter">0</div>
+        </button>
+        <button class="user__button" type="button">
+          <img class="user__icon" src="/media/user/file-earmark-text.svg" width="28" height="28" alt="Согласования.">
+          <div class="user__counter">99</div>
+        </button>
+      </div>
       <ul class="menu__section">
         <li class="menu__item">
           <a class="menu__link" href="#!">Планировщик</a>
@@ -69,19 +82,19 @@
         <ul class="footer__item store">
           <li class="store__item">
             <a class="store__link" href="#!">
-              <img class="store__image" src="/media/app_store.svg" width="32" height="32" aria-hidden="true"
+              <img class="store__image" src="/media/store/app_store.svg" width="32" height="32" aria-hidden="true"
                 alt="Апп стор.">
             </a>
           </li>
           <li class="store__item">
             <a class="store__link" href="#!">
-              <img class="store__image" src="/media/google_play.svg" width="32" height="32" aria-hidden="true"
+              <img class="store__image" src="/media/store/google_play.svg" width="32" height="32" aria-hidden="true"
                 alt="Гугл плей.">
             </a>
           </li>
           <li class="store__item">
             <a class="store__link" href="#!">
-              <img class="store__image" src="/media/telegram.svg" width="32" height="32" aria-hidden="true"
+              <img class="store__image" src="/media/store/telegram.svg" width="32" height="32" aria-hidden="true"
                 alt="Телеграм бот.">
             </a>
           </li>
