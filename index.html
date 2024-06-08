@@ -41,19 +41,29 @@
   <div class="layout">
 
     <!-- menu panel -->
-    <nav class="menu">
+    <nav class="menu" id="menu">
+
+      <!-- collapse button -->
+      <button class="menu__collapse" type="button" id="collapse-btn" aria-label="Свернуть/развернуть меню">
+        <img src="media/showButton.svg" width="20" height="20" alt=".">
+      </button>
 
       <!-- user menu -->
       <div class="menu__user user">
         <div class="user__container">
-          <button class="user__button" type="button" id="user-btn">
-            <img class="user__avatar" src="media/user/default-avatar.svg" width="48" height="48"
-              alt="Аватар пользователя.">
+          <button class="user__avatar" type="button" id="user-btn">
+            <img src="media/user/default-avatar.svg" width="48" height="48" alt="Аватар пользователя.">
           </button>
+          <div class="user__counter user__counter--total" id="total"></div>
+
           <div class="user__sub sub" id="user-sub">
             <button class=" sub__item" type="button" tabindex="-1">
               <img class="sub__icon" src="media/user/default-avatar.svg" width="24" height="24" alt=".">
               <span class="sub__txt">Профиль</span>
+            </button>
+            <button class=" sub__item" type="button" tabindex="-1">
+              <img class="sub__icon" src="media/user/bell.svg" width="24" height="24" alt=".">
+              <span class="sub__txt">Уведомления</span>
             </button>
             <button class="sub__item" type="button" tabindex="-1">
               <img class="sub__icon" src="media/user/logoutLogo.svg" width="24" height="24" alt=".">
@@ -62,11 +72,11 @@
           </div>
         </div>
         <button class="user__button" type="button">
-          <img class="user__icon" src="media/user/notification.svg" width="28" height="28" alt="Уведомления.">
+          <img class="user__icon" src="media/user/notification.svg" width="20" height="20" alt="Уведомления.">
           <div class="user__counter" id="notifications">0</div>
         </button>
         <button class="user__button" type="button">
-          <img class="user__icon" src="media/user/approvals.svg" width="28" height="28" alt="Согласования.">
+          <img class="user__icon" src="media/user/approvals.svg" width="20" height="20" alt="Согласования.">
           <div class="user__counter" id="approval"></div>
         </button>
       </div>
@@ -251,6 +261,7 @@
           <a class="menu__link" href="#!">
             <img class="menu__icon" src="media/userListlogo.svg" width="24" height="24" alt=".">
             <span class="menu__txt">Пользователи</span>
+            <img class="menu__icon menu__icon--sub" src="media/arrowOpen.svg" width="10" height="10" alt=".">
           </a>
 
           <!-- sub menu -->
@@ -335,8 +346,7 @@
         </div>
         <div class="footer__item toggle">
           <label class="toggle__label custom-toggle">
-            <input class="visually-hidden custom-toggle__input" id="hide-menu" type="checkbox" name="hide-menu"
-              value="false">
+            <input class="visually-hidden custom-toggle__input" id="collapse-tgl" type="checkbox" name="hide-menu">
             <span class="custom-toggle__button"></span>
             <span class="custom-toggle__label">Всегда открыто</span>
           </label>

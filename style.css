@@ -188,12 +188,71 @@ body {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  min-width: 80px;
   padding: 10px;
+  padding-top: 28px;
   color: var(--main-lite);
   background-color: var(--background-dark);
   box-shadow: var(--menu-shadow);
   }
+
+.menu__collapse {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.menu.isCollapsed .menu__collapse {
+  transform: rotate(180deg);
+}
+
+
+.menu__collapse:hover,
+.menu__collapse:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+.menu__collapse:active {
+  opacity: 0.4;
+}
+
+.menu__collapse:focus-visible {
+  opacity: 1;
+  outline: 2px solid orange;
+}
+
+.menu.isCollapsed .user__counter.user__counter--total {
+  display: flex;
+}
+
+.menu.isCollapsed .menu__txt {
+  display: none;
+}
+
+.menu.isCollapsed .user__button {
+  display: none;
+}
+
+.menu.isCollapsed .error {
+  display: none;
+}
+
+.menu.isCollapsed .toggle {
+  display: none;
+}
+
+.menu.isCollapsed .store {
+  display: none;
+}
 
 /* ==============================
 ========= MENU USER STYLES ========
@@ -238,6 +297,33 @@ body {
 }
 
 .user__avatar {
+  position: relative;
+  margin: 0;
+  margin-bottom: 14px;
+  margin-right: 10px;
+  padding: 0;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.user__avatar:hover,
+.user__avatar:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+.user__avatar:active {
+  opacity: 0.4;
+}
+
+.user__avatar:focus-visible {
+  opacity: 1;
+  outline: 2px solid orange;
+}
+
+.user__avatar img {
   display: block;
   width: 48px;
   height: 48px;
@@ -273,6 +359,11 @@ body {
   border-radius: 50%;
   transform: translate(100%, 0);
   visibility: hidden;
+}
+
+.user__counter--total {
+  display: none;
+  right: 20px;
 }
 
 .sub {
@@ -356,7 +447,7 @@ body {
 
 .menu__icon--sub {
   flex-shrink: 0;
-  margin-left: 6px;
+  margin-left: auto;
 }
 
 .menu__item {

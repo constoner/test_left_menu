@@ -1,12 +1,10 @@
-import { fillCounter } from "./mockup.js";
+import { fillCounters } from "./mockup.js";
 
 export const setCounters = () => {
   const notificationsCounter = document.querySelector('#notifications');
   const approvalCounter = document.querySelector('#approval');
-  const counters = [notificationsCounter, approvalCounter];
+  const totalCounter = document.querySelector('#total');
+  const counters = { "totalCounter": totalCounter, "notificationsCounter": notificationsCounter, "approvalCounter": approvalCounter };
 
-  counters.forEach((counter) => {
-    fillCounter(counter); // моковая функция для заполнения счетчиков уведомлений
-  })
-
+  fillCounters(counters); // моковая функция для заполнения счетчиков уведомлений
 }
