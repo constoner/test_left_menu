@@ -117,7 +117,7 @@ body {
 .header {
   position: relative;
   z-index: 1;
-  min-height: 80px;
+  /* min-height: 80px; */
   padding: 10px;
   background-color: var(--background-dark);
   box-shadow: var(--menu-shadow);
@@ -285,7 +285,7 @@ body {
   padding-bottom: 0;
   color: var(--main-lite);
   background-color: var(--background-dark);
-  box-shadow: 0px 0px 30px 3px black;
+  box-shadow: 0px 0px 20px 0px black;
   border-radius: 6px;
   transition: transform 0.1s ease;
   transform-origin: top left;
@@ -359,6 +359,7 @@ body {
 }
 
 .menu__item {
+  position: relative;
   margin: 0;
   margin-bottom: 14px;
   padding: 0;
@@ -395,74 +396,49 @@ body {
   margin-right: auto;
 }
 
-.item {
-  position: relative;
-}
-
-.item__sub {
+.sub-menu {
+  display: none;
   position: absolute;
   z-index: 5;
   top: 0;
   right: -10px;
-}
-
-.sub-add {
-  width: 235px;
-  padding: 0 10px;
-  background-color: var(--background-dark);
-  transform: translate(100%, 0%);
-  box-shadow: var(--menu-shadow);
-}
-
-.sub-add__sub {
-  position: absolute;
-  right: 0;
   width: 150px;
+  margin: 0;
+  padding: 0 6px;
   background-color: var(--background-dark);
+  list-style-type: none;
   transform: translate(100%, 0%);
-  box-shadow: var(--menu-shadow);
-  transform: translate(100%, -100%);
 }
 
-.item__txt {
-  margin: 4px 0;
-  padding: 0;
+.sub-menu.isActive {
+  display: block;
 }
 
-.item__btn {
-  display: flex;
-  align-items: center;
+.sub-menu__link {
+  display: block;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 4px 0;
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: 14px;
   color: var(--main-lite);
-  background-color: unset;
-  border: none;
-  cursor: pointer;
   transition: opacity 0.1s ease-in-out;
 }
 
-.item__btn img {
-  margin-right: 6px;
-}
-
-.item__btn:hover,
-.item__btn:focus {
+.sub-menu__link:hover,
+.sub-menu__link:focus {
   opacity: 0.6;
   outline: none;
 }
 
-.item__btn:active {
+.sub-menu__link:active {
   opacity: 0.4;
 }
 
-.item__btn:focus-visible {
+.sub-menu__link:focus-visible {
   opacity: 1;
   outline: 2px solid orange;
 }
-
 
 /* ==============================
 ========= MENU FOOTER STYLES ========

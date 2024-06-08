@@ -28,15 +28,21 @@
 </head>
 
 <body>
+
+  <!-- header -->
   <header class="header">
     <div class="header__container">
       <a class="header__link" href="/">
-        <img class="header__logo" src="/media/short_logo.svg" width="50" height="45" alt="Логотип.">
+        <img class="header__logo" src="/media/short_logo.svg" width="40" height="auto" alt="Логотип.">
       </a>
     </div>
   </header>
+
   <div class="layout">
+
+    <!-- menu panel -->
     <nav class="menu">
+
       <!-- user menu -->
       <div class="menu__user user">
         <div class="user__container">
@@ -66,6 +72,7 @@
       </div>
 
       <!-- main menu -->
+
       <ul class="menu__section">
         <li class="menu__item">
           <a class="menu__link" href="#!">
@@ -73,74 +80,164 @@
             <span class="menu__txt">Планировщик</span>
           </a>
         </li>
-        <li class="menu__item item">
-          <a class="menu__link" href="#!">
+        <li class="menu__item">
+          <a class="menu__link" href="#!" data-sub="crm">
             <img class="menu__icon" src="/media/CRMlogo.svg" width="32" height="32" alt=".">
             <span class="menu__txt">CRM</span>
             <img class="menu__icon menu__icon--sub" src="/media/arrowOpen.svg" width="10" height="10" alt=".">
           </a>
-          <div class="item__sub sub-add">
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Сделки</p>
-              </a>
-            </div>
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Компании</p>
-              </a>
-            </div>
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Контакты</p>
-              </a>
-            </div>
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Объекты</p>
-              </a>
-            </div>
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Договоры</p>
-              </a>
-            </div>
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Коммерческие предложения</p>
-              </a>
-              <div class="sub-add__sub">
-                <button class="item__btn" type="button">
-                  <img src="/media/addSm.svg" width="18" height="18" alt=".">
-                  <p class="item__txt"></p>Создать КП</p>
-                </button>
-              </div>
-            </div>
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Счета</p>
-              </a>
-              <div class="sub-add__sub">
-                <button class="item__btn" type="button">
-                  <img src="/media/addSm.svg" width="18" height="18" alt=".">
-                  <p class="item__txt"></p>Создать счет</p>
-                </button>
-              </div>
-            </div>
-            <div class="sub-add__item">
-              <a class="menu__link" href="#!">
-                <p class="item__txt">Акты выполненных работ</p>
-              </a>
-              <div class="sub-add__sub">
-                <button class="item__btn" type="button">
-                  <img src="/media/addSm.svg" width="18" height="18" alt=".">
-                  <p class="item__txt"></p>Создать акт</p>
-                </button>
-              </div>
-            </div>
-          </div>
+
+          <!-- sub menu -->
+          <ul class="sub-menu" data-sub="sub-crm">
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Сделки</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Компании</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Контакты</a>
+            </li>
+          </ul>
+
         </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!" data-sub="warehouse">
+            <img class="menu__icon" src="/media/warehouseLogo.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">Склад</span>
+            <img class="menu__icon menu__icon--sub" src="/media/arrowOpen.svg" width="10" height="10" alt=".">
+          </a>
+
+          <!-- sub menu -->
+          <ul class="sub-menu" data-sub="sub-warehouse">
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Закупки</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Продажи</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Товары</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/toolsLogo.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">Инструменты</span>
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!" data-sub="help">
+            <img class="menu__icon" src="/media/HDlogo.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">Help Desk</span>
+            <img class="menu__icon menu__icon--sub" src="/media/arrowOpen.svg" width="10" height="10" alt=".">
+          </a>
+
+          <!-- sub menu -->
+          <ul class="sub-menu" data-sub="sub-help">
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Заявки</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Календарь</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Компании</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Пользователи</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Отчеты</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Парк техники</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/finances.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">Финансы</span>
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/analytics.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">Аналитика</span>
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/knowledge.svg" width="32" height="32" alt=".">
+            <span class="menu__txt">База знаний</span>
+          </a>
+        </li>
+
       </ul>
+
+      <ul class="menu__section">
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/manual_icon.svg" width="24" height="24" alt=".">
+            <span class="menu__txt">Документация</span>
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/settingsLogo.svg" width="24" height="24" alt=".">
+            <span class="menu__txt">Настройки</span>
+          </a>
+        </li>
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/update_list.svg" width="24" height="24" alt=".">
+            <span class="menu__txt">Список обновлений</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <ul class="menu__section">
+
+        <li class="menu__item">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/userListlogo.svg" width="24" height="24" alt=".">
+            <span class="menu__txt">Пользователи</span>
+          </a>
+        </li>
+
+        <li class="menu__item" data-sub="tasks">
+          <a class="menu__link" href="#!">
+            <img class="menu__icon" src="/media/taskListLogo.svg" width="24" height="24" alt=".">
+            <span class="menu__txt">Задачи</span>
+            <img class="menu__icon menu__icon--sub" src="/media/arrowOpen.svg" width="10" height="10" alt=".">
+          </a>
+
+          <!-- sub menu -->
+          <ul class="sub-menu" data-sub="sub-tasks">
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Быстрый просмотр</a>
+            </li>
+            <li class="sub-menu__item">
+              <a class="sub-menu__link" href="#!">Список задач</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+
 
       <!-- menu footer -->
       <footer class="menu__footer footer">
@@ -185,6 +282,7 @@
       </div>
     </main>
   </div>
+
   <script src="/js/index.js" type="module" type="text/javascript" async></script>
 </body>
 
