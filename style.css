@@ -408,6 +408,7 @@ body {
   background-color: var(--background-dark);
   list-style-type: none;
   transform: translate(100%, 0%);
+  box-shadow: var(--menu-shadow);
 }
 
 .sub-menu.isActive {
