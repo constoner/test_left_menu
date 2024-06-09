@@ -102,6 +102,7 @@ body {
 }
 
 .layout {
+  position: relative;
   display: flex;
   flex-grow: 1;
 }
@@ -155,6 +156,124 @@ body {
   padding: 0;
 }
 
+
+@media (max-width: 750px) {
+  .header__logo {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.header__button {
+  display: none;
+}
+ @media (max-width: 750px) {
+  .header__button {
+    display: block;
+  }
+ }
+
+ /* ==============================
+========= BURGER STYLES =========
+============================== */
+
+.burger {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  margin-right: 6px;
+  padding: 0;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+
+.burger:hover,
+.burger:focus {
+  opacity: 0.6;
+  outline: none;
+}
+
+.burger:active {
+  opacity: 0.4;
+}
+
+.burger:focus-visible {
+  opacity: 1;
+  outline: 2px solid orange;
+}
+
+.burger__open {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  background-color: var(--main-lite);
+  transform: scaleY(1) translate(-50%, -50%);
+  transition: transform 0.1s ease-in-out;
+}
+
+.burger__open::before,
+.burger__open::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  background-color: var(--main-lite);
+  transform: translate(-50%, -50%);
+  content: "";
+}
+
+.burger__open::before {
+  top: -6px;
+}
+
+.burger__open::after {
+  bottom: -8px;
+}
+
+.burger__close {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  background-color: unset;
+  transform: scaleY(0) translate(-50%, -50%);
+  transition: transform 0.1s ease-in-out;
+}
+
+.burger__close::before,
+.burger__close::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: var(--main-lite);
+  content: "";
+}
+
+.burger__close::before {
+  transform: rotate(45deg);
+}
+
+.burger__close::after {
+  transform: rotate(-45deg);
+}
+
+.burger.isOpened .burger__open {
+  transform: scaleY(0) translate(-50%, -50%);
+}
+
+.burger.isOpened .burger__close {
+  transform: scaleY(1) translate(-50%, -50%);
+}
+
 /* ==============================
 ========= CONTENT STYLES ========
 ============================== */
@@ -195,6 +314,21 @@ body {
   box-shadow: var(--menu-shadow);
   }
 
+@media (max-width: 750px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(calc(-100% - 10px));
+    transition: transform 0.1s ease-in-out;
+    overflow: auto;
+  }
+}
+
+.menu.isOpened {
+  transform: translateX(0%);
+}
+
 .menu__collapse {
   position: absolute;
   top: 0;
@@ -210,10 +344,15 @@ body {
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
 
+@media (max-width: 750px) {
+  .menu__collapse {
+    display: none;
+  }
+}
+
 .menu.isCollapsed .menu__collapse {
   transform: rotate(180deg);
 }
-
 
 .menu__collapse:hover,
 .menu__collapse:focus {
@@ -383,6 +522,12 @@ body {
   transform: scale(0);
 }
 
+@media (max-width: 750px) {
+  .sub {
+    display: none;
+  }
+}
+
 .sub.isActive {
   transform: scale(1);
 }
@@ -450,6 +595,17 @@ body {
   margin-left: auto;
 }
 
+@media (max-width: 750px) {
+  .menu__icon--sub {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 750px) {
+  .sub-menu__item .menu__icon--sub {
+    display: none;  }
+}
+
 .menu__item {
   position: relative;
   margin: 0;
@@ -501,6 +657,13 @@ body {
   list-style-type: none;
   transform: translate(100%, 0%);
   box-shadow: var(--menu-shadow);
+}
+
+@media (max-width: 750px) {
+  .sub-menu {
+    position: static;
+    transform: translate(0%, 0%);
+  }
 }
 
 .sub-menu.isActive {
@@ -590,6 +753,12 @@ body {
   transition: filter 0.1s ease-in-out;
 }
 
+@media (max-width: 750px) {
+  .sub-menu__add {
+    display: none !important;
+  }
+}
+
 .sub-menu__add:hover,
 .sub-menu__add:focus {
   filter: brightness(1.25);
@@ -661,6 +830,13 @@ body {
   outline: 2px solid orange;
 }
 
+
+@media (max-width: 750px) {
+  .error {
+    display: none;
+  }
+}
+
 .error button {
   margin: 0;
   margin-bottom: 14px;
@@ -693,6 +869,13 @@ body {
 .toggle {
   width: fit-content;
   margin: 0 auto;
+}
+
+
+@media (max-width: 750px) {
+  .toggle {
+    display: none;
+  }
 }
 
 .custom-toggle {

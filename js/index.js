@@ -1,11 +1,22 @@
-import { initUser } from "./user-menu.js";
-import { setCounters } from "./counters.js";
-import { initMenu } from "./main-menu.js";
-import { collapseMenu } from "./menu-collapse.js";
-import { initErrorButton } from "./error-msg.js";
+import { initBurgerMenu } from "./initBurgerMenu.js";
+import { initCollapseMenu } from "./initCollapseMenu.js";
+import { initUserMenu } from "./initUserMenu.js";
+import { setCounters } from "./setCounters.js";
+import { initMenu } from "./initMenu.js";
+import { initErrorButton } from "./initErrorButton.js";
 
-initUser();
-setCounters();
-initMenu();
-collapseMenu();
-initErrorButton();
+window.addEventListener('load', () => {
+
+  initBurgerMenu();
+
+  if (window.screen.availWidth > 750) {
+    initCollapseMenu();
+    initUserMenu();
+    initErrorButton();
+  }
+
+  setCounters();
+  initMenu();
+
+});
+

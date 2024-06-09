@@ -1,4 +1,4 @@
-function collapseMenu() {
+function initCollapseMenu() {
   const menuPanel = document.querySelector("#menu");
   const collapseButton = document.querySelector("#collapse-btn");
   const collapseToggle = document.querySelector("#collapse-tgl");
@@ -22,4 +22,4 @@ function collapseMenu() {
   collapseToggle.addEventListener("change", onToggleClick);
 }
 
-export { collapseMenu };
+export { initCollapseMenu };

@@ -11,7 +11,7 @@ document.documentElement.addEventListener("click", () => {
   }
 });
 
-const initUser = () => {
+const initUserMenu = () => {
 
   userButton?.addEventListener("click", (evt) => {
     evt.stopPropagation();
@@ -20,4 +20,4 @@ const initUser = () => {
   userContainer.addEventListener("click", toggleMenu);
 };
 
-export { initUser };
+export { initUserMenu };
