@@ -1,4 +1,4 @@
-import { fillErrorMesage } from "./mockup/mockup.js";
+import { fillErrorMesage } from "../mockup/mockup.js";
 
 const errorButton = document.querySelector("#error-button");
 

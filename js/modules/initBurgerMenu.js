@@ -16,8 +16,6 @@ document.documentElement.addEventListener("click", (evt) => {
 
 const initBurgerMenu = () => {
   burgerButton.addEventListener("click", (evt) => toggleMenu(evt));
-
-
 };
 
 export { initBurgerMenu };
