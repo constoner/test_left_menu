@@ -8,9 +8,11 @@ let prev = null;
 
 const activateItem = (evt, index) => {
   evt.stopPropagation();
+  evt.preventDefault();
+
   const targetNode = evt.target.nodeName;
 
-  if (targetNode !== "A" && targetNode !== "BUTTON" && targetNode !== "SPAN" && window.screen.availWidth <= 750 && prev === index) {
+  if (window.screen.availWidth <= 750 && prev === index && !subMenus[index].contains(evt.target)) {
     subMenus[index]?.classList.toggle("isActive");
     prev = null;
   } else {
