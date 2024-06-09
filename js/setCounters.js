@@ -1,4 +1,4 @@
-import { fillCounters } from "./mockup.js";
+import { fillCounters } from "./mockup/mockup.js";
 
 export const setCounters = () => {
   const notificationsCounter = document.querySelector('#notifications');

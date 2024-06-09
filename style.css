@@ -118,7 +118,6 @@ body {
 .header {
   position: relative;
   z-index: 1;
-  /* min-height: 80px; */
   padding: 10px;
   background-color: var(--background-dark);
   box-shadow: var(--menu-shadow);
