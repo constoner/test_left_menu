@@ -37,7 +37,7 @@
         <span class="burger__close"></span>
       </button>
       <a class="header__link" href="">
-        <img class="header__logo" src="media/short_logo.svg" width="40" height="auto" alt="Логотип.">
+        <img class="header__logo" src="media/short_logo.svg" width="40" alt="Логотип.">
       </a>
     </div>
   </header>
@@ -58,7 +58,7 @@
           <button class="user__avatar" type="button" id="user-btn">
             <img src="media/user/default-avatar.svg" width="48" height="48" alt="Аватар пользователя.">
           </button>
-          <div class="user__counter user__counter--total" id="total"></div>
+          <div class="user__counter user__counter--total" data-counter="total"></div>
 
           <div class="user__sub sub" id="user-sub">
             <button class=" sub__item" type="button" tabindex="-1">
@@ -77,11 +77,11 @@
         </div>
         <button class="user__button" type="button">
           <img class="user__icon" src="media/user/notification.svg" width="20" height="20" alt="Уведомления.">
-          <div class="user__counter" id="notifications">0</div>
+          <span class="user__counter" data-counter="notifications">0</span>
         </button>
         <button class="user__button" type="button">
           <img class="user__icon" src="media/user/approvals.svg" width="20" height="20" alt="Согласования.">
-          <div class="user__counter" id="approval"></div>
+          <span class="user__counter" data-counter="approval"></span>
         </button>
       </div>
 
@@ -314,7 +314,8 @@
                 <button class="sub-menu__add" type="button">
                   <img src="media/addSm.svg" width="10" height="10" alt=".">
                   <span>Создать</span>
-                </button></a>
+                </button>
+              </a>
             </li>
             <li class="sub-menu__item">
               <a class="sub-menu__link" href="#!">
@@ -336,21 +337,20 @@
       <footer class="menu__footer footer">
         <ul class="footer__item store">
           <li class="store__item">
-            <a class="store__link" href="#!">
+            <a class="store__link" href="#!" aria-label="Апп стор.">
               <img class="store__image" src="media/store/app_store.svg" width="32" height="32" aria-hidden="true"
-                alt="Апп стор.">
+                alt="">
             </a>
           </li>
           <li class="store__item">
-            <a class="store__link" href="#!">
+            <a class="store__link" href="#!" aria-label="Гугл плей.">
               <img class="store__image" src="media/store/google_play.svg" width="32" height="32" aria-hidden="true"
-                alt="Гугл плей.">
+                alt="">
             </a>
           </li>
           <li class="store__item">
-            <a class="store__link" href="#!">
-              <img class="store__image" src="media/store/telegram.svg" width="32" height="32" aria-hidden="true"
-                alt="Телеграм бот.">
+            <a class="store__link" href="#!" aria-label="Телеграм бот.">
+              <img class="store__image" src="media/store/telegram.svg" width="32" height="32" aria-hidden="true" alt="">
             </a>
           </li>
         </ul>
@@ -375,7 +375,7 @@
     </main>
   </div>
 
-  <script src="js/index.js" type="module" type="text/javascript" async></script>
+  <script src="js/index.js" type="module" async></script>
 </body>
 
 </html>
