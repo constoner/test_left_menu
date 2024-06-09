@@ -3,7 +3,6 @@
 ========= REBOOT CSS ============
 ============================== */
 
-
 .visually-hidden {
   position: absolute;
 
@@ -277,29 +276,6 @@ body {
   transform: scaleY(1) translate(-50%, -50%);
 }
 
-/* ==============================
-========= CONTENT STYLES ========
-============================== */
-
-.main {
-  background-color: #eeeeee;
-}
-
-.main__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  }
-
-  .main__spare {
-    font-family: var(--main-font);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 110%;
-    color: #b9b9b9;
-    text-align: center;
-  }
 
 /* ==============================
 ========= MENU STYLES ========
@@ -346,6 +322,11 @@ body {
   user-select: none;
   opacity: 1;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.menu__collapse:disabled {
+  opacity: 0.2;
+  cursor: auto;
 }
 
 @media (max-width: 750px) {
@@ -671,12 +652,21 @@ body {
   list-style-type: none;
   transform: translate(100%, 0%);
   box-shadow: var(--menu-shadow);
+
 }
 
 @media (max-width: 750px) {
   .sub-menu {
     position: static;
+    display: block;
     transform: translate(0%, 0%);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
+
+    .sub-menu.isActive {
+    max-height: 500px;
   }
 }
 
@@ -752,8 +742,8 @@ body {
   top: 50%;
   right: 0;
   display: none;
-  align-items: center;
   width: 100px;
+  height: 100%;
   padding: 8px;
   font-family: var(--main-font);
   font-size: 14px;
@@ -790,10 +780,11 @@ body {
 
 .sub-menu__link:hover .sub-menu__add,
 .sub-menu__link:focus .sub-menu__add {
-  display: flex;
+  display: block;
 }
 
 .sub-menu__add img {
+  display: inline;
   margin: 0;
   margin-right: 6px;
   padding: 0;
@@ -949,3 +940,27 @@ body {
   cursor: pointer;
   user-select: none;
 }
+
+/* ==============================
+========= CONTENT STYLES ========
+============================== */
+
+.main {
+  background-color: #eeeeee;
+}
+
+.main__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  }
+
+  .main__spare {
+    font-family: var(--main-font);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 110%;
+    color: #b9b9b9;
+    text-align: center;
+  }

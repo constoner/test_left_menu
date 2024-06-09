@@ -13,8 +13,10 @@ function initCollapseMenu() {
 
     if (collapseToggle.checked) {
       collapseButton.removeEventListener("click", onButtonClick);
+      collapseButton.toggleAttribute("disabled");
     } else {
       collapseButton.addEventListener("click", onButtonClick);
+      collapseButton.toggleAttribute("disabled");
     }
   }
 
