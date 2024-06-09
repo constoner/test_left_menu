@@ -658,15 +658,7 @@ body {
 @media (max-width: 750px) {
   .sub-menu {
     position: static;
-    display: block;
     transform: translate(0%, 0%);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-in-out;
-  }
-
-    .sub-menu.isActive {
-    max-height: 500px;
   }
 }
 
