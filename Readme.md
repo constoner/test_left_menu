@@ -1,8 +1,10 @@
 # Тествое задание на позицию Frontend-разработчика
 
-_стэк: HTML, CSS, JavaScript_
+_**стэк:** HTML, CSS, JavaScript_
 
-_деплой: https://constoner.github.io/test_left_menu/_
+_**деплой:** https://constoner.github.io/test_left_menu/_
+
+_**кратко:** выполнен рефакторинг предоставленного меню для адекватной работы на декстопе и мобилках, добавлены дополнительные элементы по заданию. Использованы только ванильные html, css, javascript_
 
 ## Входные данные:
 
